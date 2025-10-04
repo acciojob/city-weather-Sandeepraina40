@@ -57,6 +57,7 @@ function App() {
 
       const data = await res.json();
       setWeather(data);
+      setQuery(""); // Clear the search input after successful fetch
     } catch (err) {
       if (err.name === "AbortError") {
         // fetch was aborted — ignore
